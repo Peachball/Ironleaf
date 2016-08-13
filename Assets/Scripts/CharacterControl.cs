@@ -14,23 +14,23 @@ public class CharacterControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rb.velocity = new Vector2(0, 0);
+        Vector2 vel = new Vector2(0, 0);
         if (Input.GetButton("Up"))
         {
-            rb.velocity = new Vector2(0, speed);
+            vel.y += speed;
         }
         if (Input.GetButton("Down"))
         {
-            rb.velocity = new Vector2(0, -speed);
+            vel.y -= speed;
         }
         if (Input.GetButton("Right"))
         {
-            rb.velocity = new Vector2(speed, 0);
+            vel.x += speed;
         }
         if (Input.GetButton("Left"))
         {
-            rb.velocity = new Vector2(-speed, 0);
+            vel.x -= speed;
         }
-
+        rb.velocity = vel;
 	}
 }
