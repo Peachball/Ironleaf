@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5825bd26af091034e8275a29736f9e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 1414819494}
+  textbox: {fileID: 1414819496}
 --- !u!1 &1085540168
 GameObject:
   m_ObjectHideFlags: 0

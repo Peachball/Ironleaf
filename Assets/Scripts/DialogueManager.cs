@@ -2,11 +2,12 @@
 using System.Collections;
 using SimpleJSON;
 using UnityEngine.UI;
+using System.IO;
+using System.Text;
 
 public class DialogueManager : MonoBehaviour {
 
-    public GameObject textbox;
-    private Text t;
+    public Text textbox;
 
     /*
         The dialogue will be formatted as a json list representing the speech of two people
@@ -22,41 +23,56 @@ public class DialogueManager : MonoBehaviour {
     */
     
     //Placeholder (dialogue should be loaded in dynamically from txt files later
-    private string dialogue = @"
-[
-{
-    name : 'A',
-    text : HIIIIII,
-    time : 1
-},
-{
-    name : 'B',
-    text : BYEEEEEE,
-    time : 10
-}
-]
-";
 
     private float start_time;
-    private JSONNode parsed_dialogue;
     private int line_num = 0;
 
 	// Use this for initialization
 	void Start () {
-        start_time = Time.time;
-        parsed_dialogue = JSON.Parse(dialogue);
-        t = textbox.GetComponent<Text>();
+        string dialogue = loadDialogueFromFile("Assets\\Dialogue\\1stCutsceneDialogue.txt");
+        StartCoroutine(PlayLines(dialogue));
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        float max_elapsed_time = parsed_dialogue[line_num]["time"].AsFloat;
-        if (Time.time - start_time > max_elapsed_time) {
-            //Change text of textbox to reflect dialogue
-            t.text = parsed_dialogue[line_num]["text"];
 
-            line_num++;
-            start_time = Time.time;
-        }
+    // Update is called once per frame
+	void Update () {
 	}
+
+    private string loadDialogueFromFile(string filename)
+    {
+        StreamReader r = new StreamReader(filename, Encoding.Default);
+        return r.ReadToEnd();
+    }
+    private void setText(string text)
+    {
+        textbox.text = text;
+    }
+
+    IEnumerator PlayLines(string lines, float delay=0.0f)
+    {
+        yield return new WaitForSeconds(delay);
+        JSONNode parsed_dialogue = JSON.Parse(lines);
+        for (int i = 0; i < parsed_dialogue.Count; i++)
+        {
+            string name = parsed_dialogue[i]["name"];
+            string line = parsed_dialogue[i]["text"];
+            float time = parsed_dialogue[i]["time"].AsFloat;
+            yield return StartCoroutine(playDialogue(lines: line, time: time, name: name));
+        }
+        yield return null;
+    }
+
+    private IEnumerator playDialogue(string lines, float time, string name="")
+    {
+        float time_bet_chars = time / lines.Length;
+        for(int i = 0; i <= lines.Length; i++)
+        {
+            string prefix = "";
+            if(name != "")
+            {
+                prefix = name + " : ";
+            }
+            setText(prefix + lines.Substring(0, i));
+            yield return new WaitForSeconds(time_bet_chars);
+        }
+    }
 }
