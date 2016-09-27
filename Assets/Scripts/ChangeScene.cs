@@ -11,7 +11,8 @@ public class ChangeScene : MonoBehaviour {
         SceneManager.LoadScene(scene);
     }
 
-    public void changeroom(string scene)
+#region changeroom function
+    public void changeroom(string scene, GameObject character=null)
     {
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
         GameObject g = null;
@@ -24,6 +25,10 @@ public class ChangeScene : MonoBehaviour {
         }
         if(g != null)
         {
+			SceneData d = g.GetComponent<SceneData>();
+			if(character != null){
+				character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
+			}
             if (startscene != null)
             {
                 startscene.transform.position = new Vector3(100, 100, -20);
@@ -32,6 +37,8 @@ public class ChangeScene : MonoBehaviour {
             startscene = g;
         }
     }
+#endregion
+
 	// Use this for initialization
 	void Start () {
 	    if(startscene != null)
