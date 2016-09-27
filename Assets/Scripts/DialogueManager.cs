@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Text textbox;
 
+#region Dialogue format description
     /*
         The dialogue will be formatted as a json list representing the speech of two people
 
@@ -21,15 +22,14 @@ public class DialogueManager : MonoBehaviour {
         }
         ]
     */
-    
+#endregion
     //Placeholder (dialogue should be loaded in dynamically from txt files later
-
-    private float start_time;
-    private int line_num = 0;
 
 	// Use this for initialization
 	void Start () {
-        string dialogue = loadDialogueFromFile("Assets\\Dialogue\\1stCutsceneDialogue.txt");
+		string pathsep = Path.DirectorySeparatorChar + "";
+        string dialogue = loadDialogueFromFile("Assets" + pathsep + "Dialogue" 
+				+ pathsep + "1stCutsceneDialogue.txt");
         StartCoroutine(PlayLines(dialogue));
 	}
 
@@ -39,14 +39,18 @@ public class DialogueManager : MonoBehaviour {
 
     private string loadDialogueFromFile(string filename)
     {
-        StreamReader r = new StreamReader(filename, Encoding.Default);
+        var r = new StreamReader(filename, Encoding.Default);
         return r.ReadToEnd();
     }
+
+#region
     private void setText(string text)
     {
         textbox.text = text;
     }
+#endregion
 
+#region Dialogue player
     IEnumerator PlayLines(string lines, float delay=0.0f)
     {
         yield return new WaitForSeconds(delay);
@@ -75,4 +79,5 @@ public class DialogueManager : MonoBehaviour {
             yield return new WaitForSeconds(time_bet_chars);
         }
     }
+#endregion
 }

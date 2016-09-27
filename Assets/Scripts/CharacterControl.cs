@@ -9,7 +9,7 @@ public class CharacterControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		GameObject g;
 	}
 	
 	// Update is called once per frame
