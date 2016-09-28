@@ -27,23 +27,22 @@ public class DialogueManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		string pathsep = Path.DirectorySeparatorChar + "";
-        string dialogue = loadDialogueFromFile("Assets" + pathsep + "Dialogue" 
-				+ pathsep + "1stCutsceneDialogue.txt");
-        StartCoroutine(PlayLines(dialogue));
 	}
 
     // Update is called once per frame
 	void Update () {
 	}
 
-    private string loadDialogueFromFile(string filename)
+	/*
+	 * Files are looked up in the "Assets/Dialogue" folder
+	 */
+    public string loadDialogueFromFile(string filename)
     {
-        var r = new StreamReader(filename, Encoding.Default);
+        var r = new StreamReader("Assets/Dialogue" + filename, Encoding.Default);
         return r.ReadToEnd();
     }
 
-#region
+#region helper methods
     private void setText(string text)
     {
         textbox.text = text;
@@ -51,7 +50,7 @@ public class DialogueManager : MonoBehaviour {
 #endregion
 
 #region Dialogue player
-    IEnumerator PlayLines(string lines, float delay=0.0f)
+    IEnumerator playLines(string lines, float delay=0.0f)
     {
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
