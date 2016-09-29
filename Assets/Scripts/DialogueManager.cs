@@ -38,7 +38,9 @@ public class DialogueManager : MonoBehaviour {
 	 */
     public string loadDialogueFromFile(string filename)
     {
-        var r = new StreamReader("Assets/Dialogue" + filename, Encoding.Default);
+		string ps = System.IO.Path.DirectorySeparatorChar + "";
+        var r = new StreamReader("Assets"+ps+"Dialogue" + ps + filename,
+				Encoding.Default);
         return r.ReadToEnd();
     }
 
@@ -50,8 +52,9 @@ public class DialogueManager : MonoBehaviour {
 #endregion
 
 #region Dialogue player
-    IEnumerator playLines(string lines, float delay=0.0f)
+    public IEnumerator playLines(string lines, float delay=0.0f)
     {
+		isplaying = true;
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
         for (int i = 0; i < parsed_dialogue.Count; i++)
@@ -62,6 +65,7 @@ public class DialogueManager : MonoBehaviour {
             yield return StartCoroutine(playDialogue(lines: line, time: time, name: name));
         }
         yield return null;
+		isplaying = false;
     }
 
     private IEnumerator playDialogue(string lines, float time, string name="")
