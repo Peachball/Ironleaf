@@ -12,7 +12,8 @@ public class ChangeScene : MonoBehaviour {
     }
 
 #region changeroom function
-    public void changeroom(string scene, GameObject character=null)
+    public void changeroom(string scene, GameObject character=null,
+			float xspawn=float.MaxValue, float yspawn=float.MaxValue)
     {
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
         GameObject g = null;
@@ -26,12 +27,18 @@ public class ChangeScene : MonoBehaviour {
 		if(g == null){
 			g = Instantiate(Resources.Load("Rooms/" + scene,
 						typeof(GameObject))) as GameObject;
+			g.name = g.name.Replace("(Clone)", "");
 		}
         if(g != null)
         {
 			SceneData d = g.GetComponent<SceneData>();
 			if(character != null){
-				character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
+				if(!(xspawn == float.MaxValue || yspawn == float.MaxValue)){
+					character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
+				}
+				else{
+					character.transform.position = new Vector2(xspawn, yspawn);
+				}
 			}
             if (startscene != null)
             {

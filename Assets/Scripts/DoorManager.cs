@@ -5,6 +5,8 @@ public class DoorManager : MonoBehaviour {
 
     public string nextscene;
     public ChangeScene scenemanager;
+	public float xspawn;
+	public float yspawn;
 	
 	private GameObject mc;
 
