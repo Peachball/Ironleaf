@@ -54,7 +54,6 @@ public class DialogueManager : MonoBehaviour {
 #region Dialogue player
     public IEnumerator playLines(string lines, float delay=0.0f)
     {
-		isplaying = true;
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
         for (int i = 0; i < parsed_dialogue.Count; i++)
@@ -62,10 +61,19 @@ public class DialogueManager : MonoBehaviour {
             string name = parsed_dialogue[i]["name"];
             string line = parsed_dialogue[i]["text"];
             float time = parsed_dialogue[i]["time"].AsFloat;
-            yield return StartCoroutine(playDialogue(lines: line, time: time, name: name));
+
+			//Whether or not to wait for the user to click something to continue
+			//the dialogue
+			bool fast = parsed_dialogue[i]["fast"].AsBool;
+			if(!fast){
+				while(!Input.GetButton("Interact")){
+					yield return null;
+				}
+			}
+            yield return StartCoroutine(
+					playDialogue(lines: line, time: time, name: name));
         }
         yield return null;
-		isplaying = false;
     }
 
     private IEnumerator playDialogue(string lines, float time, string name="")
@@ -83,4 +91,5 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 #endregion
+
 }

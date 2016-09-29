@@ -18,8 +18,9 @@ public class SingleGameManager : MonoBehaviour{
 	private IEnumerator rungame(){
 		//Play first cutscene + wait until it's done
 		SceneManager.LoadScene("Scenes/1stCutscene");
+		yield return null;
+
 		GameObject d = null;
-		yield return new WaitForSeconds(0.05f);
 		d = GameObject.Find("Canvas");
 		DialogueManager dm = d.GetComponent<DialogueManager>();
 		string cutscenedialogue = dm.loadDialogueFromFile(
