@@ -10,12 +10,18 @@ public class DoorManager : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        scenemanager.changeroom(nextscene, mc);
+		if(scenemanager != null){
+			scenemanager.changeroom(nextscene, mc);
+		}
     }
 
 	// Use this for initialization
 	void Start () {
 		mc = GameObject.Find("Main Character");
+		if(scenemanager == null){
+			scenemanager = GameObject.Find("Main Camera")
+				.GetComponent<ChangeScene>();
+		}
 	}
 	
 	// Update is called once per frame

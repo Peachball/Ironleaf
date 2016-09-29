@@ -21,7 +21,7 @@ public class SingleGameManager : MonoBehaviour{
 		yield return null;
 
 		GameObject d = null;
-		d = GameObject.Find("Canvas");
+		d = GameObject.Find("DialogueBackground");
 		DialogueManager dm = d.GetComponent<DialogueManager>();
 		string cutscenedialogue = dm.loadDialogueFromFile(
 				"1stCutsceneDialogue.txt");

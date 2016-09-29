@@ -23,6 +23,10 @@ public class ChangeScene : MonoBehaviour {
                 g = r;
             }
         }
+		if(g == null){
+			g = Instantiate(Resources.Load("Rooms/" + scene,
+						typeof(GameObject))) as GameObject;
+		}
         if(g != null)
         {
 			SceneData d = g.GetComponent<SceneData>();

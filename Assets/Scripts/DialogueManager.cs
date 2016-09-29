@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour {
 			//Whether or not to wait for the user to click something to continue
 			//the dialogue
 			bool fast = parsed_dialogue[i]["fast"].AsBool;
-			if(!fast){
+			if(!fast && i != 0){
 				while(!Input.GetButton("Interact")){
 					yield return null;
 				}
