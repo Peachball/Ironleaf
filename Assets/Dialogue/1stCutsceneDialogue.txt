@@ -1,0 +1,28 @@
+[
+{
+	name: Iron,
+	text: "Man, aren't we having so much fun?",
+	time: 2,
+},
+{
+	name: Leaf,
+	text: "I totally am having fun with these chairs!",
+	time: 2,
+},
+{
+	name: Iron,
+	text: "It would really suck if these times didn't last forever",
+	time: 2,
+},
+{
+	name: Leaf,
+	text: "Yeah, it would be a real shame if GLOBAL WARMING was a thing",
+	time: 2,
+}
+{
+	name: Leaf,
+	text: "because people wouldn't be able to live their normal lives it
+	existed",
+	time: 2,
+}
+]

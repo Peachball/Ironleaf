@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+  - enabled: 1
+    path: Assets/Scenes/1stCutscene.unity
+  - enabled: 0
+    path: Assets/Scenes/Kitchen.unity
+  - enabled: 1
+    path: Assets/Scenes/House.unity
