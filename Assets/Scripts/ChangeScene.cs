@@ -39,8 +39,6 @@ public class ChangeScene : MonoBehaviour {
         {
 			SceneData d = g.GetComponent<SceneData>();
 			if(character != null){
-				Debug.Log(xspawn);
-				Debug.Log(yspawn);
 				if((xspawn == float.MaxValue || yspawn == float.MaxValue)){
 					character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
 				}

@@ -7,7 +7,9 @@ using System.Text;
 
 public class DialogueManager : MonoBehaviour {
 
-    public Text textbox;
+    public Text textbox; //Link to ui textbox
+
+	public string curstring = "";
 
 #region Dialogue format description
     /*
@@ -23,7 +25,6 @@ public class DialogueManager : MonoBehaviour {
         ]
     */
 #endregion
-    //Placeholder (dialogue should be loaded in dynamically from txt files later
 
 	// Use this for initialization
 	void Start () {
@@ -45,13 +46,22 @@ public class DialogueManager : MonoBehaviour {
     }
 
 #region helper methods
-    private void setText(string text)
+	//Set text of textbox
+    public void setText(string text)
     {
         textbox.text = text;
     }
 #endregion
 
 #region Dialogue player
+	/*Play lines with the appropriate timing based off of a json string
+	 *
+	 * Params:
+	 *   lines: A json string representing the lines of dialogue + other
+	 *          details(e.g. time)
+	 *   delay: Amount of time to wait before playing said dialogue
+	 *   		(Generally should be 0)
+	*/
     public IEnumerator playLines(string lines, float delay=0.0f)
     {
         yield return new WaitForSeconds(delay);
@@ -76,6 +86,12 @@ public class DialogueManager : MonoBehaviour {
         yield return null;
     }
 
+	/*
+	 * Play one line of dialogue
+	 *
+	 * This method waits the appropriate amount of time between each character
+	 * and appends the name to the dialogue line
+	 */
     private IEnumerator playDialogue(string lines, float time, string name="")
     {
         float time_bet_chars = time / lines.Length;
