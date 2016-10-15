@@ -36,12 +36,6 @@ interesting. These scripts are the "components"
 For more detailed documentation, they will be found within the scripts
 themselves
 ## Misc
-Useful function list:
-~~~
-GameObject g;
-g.GetComponent&lt;TypeName&gt;(); //Returns a component of type TypeName
-~~~
-
 Style Guide
 * All method documentation should be written in comments before the method
 * Class documentation is written before the class declaration
