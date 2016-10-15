@@ -13,7 +13,8 @@ public class DoorManager : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D c)
     {
 		if(scenemanager != null){
-			scenemanager.changeroom(nextscene, mc);
+			scenemanager.changeroom(nextscene, character: mc,
+					xspawn: xspawn, yspawn: yspawn);
 		}
     }
 

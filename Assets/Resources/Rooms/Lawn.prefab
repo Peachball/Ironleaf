@@ -58,7 +58,7 @@ GameObject:
   - 114: {fileID: 114000010199635302}
   m_Layer: 0
   m_Name: Lawn
-  m_TagString: Untagged
+  m_TagString: room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextscene: Kitchen
   scenemanager: {fileID: 0}
+  xspawn: 20
+  yspawn: 20
 --- !u!212 &212000011687077278
 SpriteRenderer:
   m_ObjectHideFlags: 1

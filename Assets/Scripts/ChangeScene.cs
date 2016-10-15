@@ -12,6 +12,12 @@ public class ChangeScene : MonoBehaviour {
     }
 
 #region changeroom function
+	private void initscene(){
+		GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
+		foreach(GameObject r in rooms){
+			r.transform.position = new Vector2(100, 100);
+		}
+	}
     public void changeroom(string scene, GameObject character=null,
 			float xspawn=float.MaxValue, float yspawn=float.MaxValue)
     {
@@ -33,7 +39,9 @@ public class ChangeScene : MonoBehaviour {
         {
 			SceneData d = g.GetComponent<SceneData>();
 			if(character != null){
-				if(!(xspawn == float.MaxValue || yspawn == float.MaxValue)){
+				Debug.Log(xspawn);
+				Debug.Log(yspawn);
+				if((xspawn == float.MaxValue || yspawn == float.MaxValue)){
 					character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
 				}
 				else{
@@ -52,6 +60,7 @@ public class ChangeScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		initscene();
 	    if(startscene != null)
         {
             startscene.transform.position = new Vector3(0, 0, 0);

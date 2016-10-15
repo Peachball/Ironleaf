@@ -23,7 +23,7 @@ GameObject:
   - 61: {fileID: 61000010519126872}
   - 114: {fileID: 114000011491371572}
   m_Layer: 0
-  m_Name: Left Door
+  m_Name: Right Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,6 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextscene: Kitchen
   scenemanager: {fileID: 0}
+  xspawn: 0
+  yspawn: 0
 --- !u!212 &212000010168792444
 SpriteRenderer:
   m_ObjectHideFlags: 1
