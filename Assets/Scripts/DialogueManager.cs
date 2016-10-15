@@ -5,10 +5,12 @@ using UnityEngine.UI;
 using System.IO;
 using System.Text;
 
+// Handles things that involve the dialogue box
 public class DialogueManager : MonoBehaviour {
 
-    public Text textbox; //Link to ui textbox
+    public Text textbox; //links to ui textbox
 
+	// used in other scripts to determine what text is in the dialogue box
 	public string curstring = "";
 
 #region Dialogue format description
@@ -36,6 +38,8 @@ public class DialogueManager : MonoBehaviour {
 
 	/*
 	 * Files are looked up in the "Assets/Dialogue" folder
+	 *
+	 * returns: string representing the text in the file
 	 */
     public string loadDialogueFromFile(string filename)
     {

@@ -9,12 +9,13 @@ public class CharacterControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject g;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 vel = new Vector2(0, 0);
+        Vector2 vel = new Vector2(0, 0); //buffer for character velocity
+
+		//Detect which button is pressed -> set velocity based off buttons
         if (Input.GetButton("Up"))
         {
             vel.y += speed;
