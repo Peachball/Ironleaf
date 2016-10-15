@@ -76,16 +76,16 @@ public class DialogueManager : MonoBehaviour {
             string line = parsed_dialogue[i]["text"];
             float time = parsed_dialogue[i]["time"].AsFloat;
 
-			//Whether or not to wait for the user to click something to continue
-			//the dialogue
-			bool fast = parsed_dialogue[i]["fast"].AsBool;
-			if(!fast && i != 0){
-				while(!Input.GetButton("Interact")){
-					yield return null;
-				}
-			}
+			      //Whether or not to wait for the user to click something to continue
+			      //the dialogue
+			      bool fast = parsed_dialogue[i]["fast"].AsBool;
+			      if(!fast && i != 0){
+				      while(!Input.GetButton("Interact")){
+					      yield return null;
+				      }
+			      }
             yield return StartCoroutine(
-					playDialogue(lines: line, time: time, name: name));
+					    playDialogue(lines: line, time: time, name: name));
         }
         yield return null;
     }
@@ -107,7 +107,10 @@ public class DialogueManager : MonoBehaviour {
                 prefix = name + " : ";
             }
             setText(prefix + lines.Substring(0, i));
-            yield return new WaitForSeconds(time_bet_chars);
+            if (!Input.GetButton("Run"))
+            {
+              yield return new WaitForSeconds(time_bet_chars);
+            }
         }
     }
 #endregion
