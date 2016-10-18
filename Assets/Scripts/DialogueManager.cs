@@ -34,6 +34,10 @@ public class DialogueManager : MonoBehaviour {
 
     // Update is called once per frame
 	void Update () {
+		if(curstring == ""){
+			Debug.Log("box hidden");
+			gameObject.active = false;
+		}
 	}
 
 	/*

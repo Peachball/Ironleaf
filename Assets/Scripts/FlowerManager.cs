@@ -29,16 +29,20 @@ but you aren't sure what to do about it";
 		if(c.gameObject.name == "Main Character"
 				&& Input.GetButton("Interact")){
 			dbox.setText(getResponse());
+			dbox.curstring = "flowerdialogue";
+			dbox.gameObject.active = true;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D c){
 		if(c.gameObject.name == "Main Character"){
-			dbox.setText("");
+			if(dbox.curstring == "flowerdialogue"){
+				dbox.curstring = "";
+				dbox.setText("");
+			}
 		}
 	}
 	// Update is called once per frame
 	void Update () {
-	
 	}
 }
