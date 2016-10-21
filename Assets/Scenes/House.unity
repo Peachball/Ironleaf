@@ -184,6 +184,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &215182792 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013712279624, guid: f4cad5434a6b84f5688b5bcb4524920c,
+    type: 2}
+  m_PrefabInternal: {fileID: 988567704}
+--- !u!225 &215182793
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215182792}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &230106161
 Prefab:
   m_ObjectHideFlags: 0

@@ -10,8 +10,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Text textbox; //links to ui textbox
 
-	// used in other scripts to determine what text is in the dialogue box
-	public string curstring = "";
+	private CanvasGroup cg;
 
 #region Dialogue format description
     /*
@@ -30,14 +29,11 @@ public class DialogueManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		cg = GetComponent<CanvasGroup>();
 	}
 
     // Update is called once per frame
 	void Update () {
-		if(curstring == ""){
-			Debug.Log("box hidden");
-			gameObject.active = false;
-		}
 	}
 
 	/*
@@ -52,6 +48,14 @@ public class DialogueManager : MonoBehaviour {
 				Encoding.Default);
         return r.ReadToEnd();
     }
+
+	public void hide(){
+		cg.alpha = 0f;
+	}
+
+	public void show(){
+		cg.alpha = 1f;
+	}
 
 #region helper methods
 	//Set text of textbox
@@ -70,8 +74,10 @@ public class DialogueManager : MonoBehaviour {
 	 *   delay: Amount of time to wait before playing said dialogue
 	 *   		(Generally should be 0)
 	*/
-    public IEnumerator playLines(string lines, float delay=0.0f)
+    public IEnumerator playLines(string lines, float delay=0.0f,
+			string type="dialogue")
     {
+		show();
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
         for (int i = 0; i < parsed_dialogue.Count; i++)

@@ -29,17 +29,14 @@ but you aren't sure what to do about it";
 		if(c.gameObject.name == "Main Character"
 				&& Input.GetButton("Interact")){
 			dbox.setText(getResponse());
-			dbox.curstring = "flowerdialogue";
-			dbox.gameObject.active = true;
+			dbox.show();
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D c){
 		if(c.gameObject.name == "Main Character"){
-			if(dbox.curstring == "flowerdialogue"){
-				dbox.curstring = "";
-				dbox.setText("");
-			}
+			dbox.setText("");
+			dbox.hide();
 		}
 	}
 	// Update is called once per frame
