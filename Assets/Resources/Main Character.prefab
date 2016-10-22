@@ -74,7 +74,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.76, y: 1.16}
+  m_Size: {x: 1.5, y: 2.5}
 --- !u!95 &95000010377133048
 Animator:
   serializedVersion: 3
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 84b77c95c3f40c84581bd86c9eb51eb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dd23fe1d066d421dbc2ec3b75822407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
