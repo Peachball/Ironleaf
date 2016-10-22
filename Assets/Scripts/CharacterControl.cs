@@ -4,12 +4,14 @@ using System.Collections;
 public class CharacterControl : MonoBehaviour {
 
     public Rigidbody2D rb;
+	private Animator animator;
 
     public float speed;
     public float runSpeed;
 
 	// Use this for initialization
 	void Start () {
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -42,5 +44,7 @@ public class CharacterControl : MonoBehaviour {
           vel.x -= movespeed;
         }
         rb.velocity = vel;
+
+		animator.SetFloat("VelX", rb.velocity.x);
 	}
 }
