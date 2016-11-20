@@ -37,7 +37,39 @@ public class SingleGameManager : MonoBehaviour{
 
 		//Play first scene + wait for interaction to occur
 		SceneManager.LoadScene("Scenes/House");
-		yield return null;
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
+
+		//Play Bedroom cutscene
+		SceneManager.LoadScene("Scenes/BedroomCutscene");
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
+
+		//Play Hallway scene
+		SceneManager.LoadScene("Scenes/Hallway");
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
+
+		//Momma's sick cutscene
+		SceneManager.LoadScene("Scenes/SickMomCutscene");
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
+
+		//Cure construction minigame
+		SceneManager.LoadScene("Scenes/CureMinigame");
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
+		
+		//Concluding cutscene
+		SceneManager.LoadScene("Scenes/End");
+		Globals.ready = false;
+		while(!Globals.ready)
+			yield return null;
 	}
 #endregion
 }

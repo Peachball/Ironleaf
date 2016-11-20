@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class Globals : MonoBehaviour {
 
 	public static Dictionary<string, int> inventory;
+	public static bool ready = false;
 
 	// Use this for initialization
 	void Start () {
