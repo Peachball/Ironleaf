@@ -574,7 +574,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1275070570}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1275070572
 Behaviour:
   m_ObjectHideFlags: 0
@@ -840,8 +840,28 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 500522db4c58e44199f11501b7c6476c,
+      objectReference: {fileID: 21300000, guid: 8dd23fe1d066d421dbc2ec3b75822407,
         type: 3}
+    - target: {fileID: 212000011702340728, guid: eb6180e105920444b921f004aba35eb7,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011702340728, guid: eb6180e105920444b921f004aba35eb7,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011702340728, guid: eb6180e105920444b921f004aba35eb7,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011702340728, guid: eb6180e105920444b921f004aba35eb7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb6180e105920444b921f004aba35eb7, type: 2}
   m_IsPrefabParent: 0
