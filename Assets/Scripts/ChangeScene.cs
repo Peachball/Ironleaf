@@ -27,7 +27,7 @@ public class ChangeScene : MonoBehaviour {
 	// gameobject/prefab either in the scene, or store in the resources room
 	// folder
     public void changeroom(string scene, GameObject character=null,
-			float xspawn=float.MaxValue, float yspawn=float.MaxValue)
+			float xspawn = 0, float yspawn = 0) // Dummy Values
     {
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
         GameObject g = null;
