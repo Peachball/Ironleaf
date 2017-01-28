@@ -23,14 +23,6 @@ public class ChangeScene : MonoBehaviour {
     }
 
 #region changeroom function
-	//Initialization code
-	private void initscene(){
-		GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
-		foreach(GameObject r in rooms){
-			r.transform.position = new Vector2(100, 100);
-		}
-	}
-
 	// Function that changes the scene/room to another scene/room that is a
 	// gameobject/prefab either in the scene, or store in the resources room
 	// folder
@@ -54,27 +46,26 @@ public class ChangeScene : MonoBehaviour {
         if(g != null)
         {
 			SceneData d = g.GetComponent<SceneData>();
+            Vector3 pos = g.transform.position;
+            gameObject.transform.position = new Vector3(pos.x, pos.y, -10);
 			if(character != null){
 				if((xspawn == float.MaxValue || yspawn == float.MaxValue)){
-					character.transform.position = new Vector2(d.xSpawn, d.ySpawn);
+					character.transform.position = new Vector2(d.xSpawn + pos.y, d.ySpawn + pos.x);
 				}
 				else{
-					character.transform.position = new Vector2(xspawn, yspawn);
+					character.transform.position = new Vector2(pos.x + xspawn, pos.y + yspawn);
 				}
 			}
-            if (startscene != null)
-            {
-                startscene.transform.position = new Vector3(100, 100, -20);
-            }
-            g.transform.position = new Vector3(0, 0, 0);
-            startscene = g;
+        }
+        else
+        {
+            Debug.Log("Could not find room with name:");
         }
     }
 #endregion
 
 	// Initialization
 	void Start () {
-		initscene();
 	    if(startscene != null)
         {
             startscene.transform.position = new Vector3(0, 0, 0);
