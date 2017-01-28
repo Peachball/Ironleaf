@@ -2,16 +2,38 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/*
+ * A class for changing scenes/rooms
+ */
 public class ChangeScene : MonoBehaviour {
 
+	//Startscene is for the House scene:
+	//This script manages which scene appears first/how to change the scene, so
+	//the first scene needs to be recorded
+	//
+	//Additionally, the startscene is also the current scene
     public GameObject startscene = null;
 
+
+	// A callback for buttons (in button gameobjects, you can specify this
+	//                         script and this function as a callback)
     public void onclick(string scene)
     {
         SceneManager.LoadScene(scene);
     }
 
 #region changeroom function
+	//Initialization code
+	private void initscene(){
+		GameObject[] rooms = GameObject.FindGameObjectsWithTag("room");
+		foreach(GameObject r in rooms){
+			r.transform.position = new Vector2(100, 100);
+		}
+	}
+
+	// Function that changes the scene/room to another scene/room that is a
+	// gameobject/prefab either in the scene, or store in the resources room
+	// folder
     public void changeroom(string scene, GameObject character=null,
 			float xspawn = 0, float yspawn = 0) // Dummy Values
     {
@@ -50,8 +72,9 @@ public class ChangeScene : MonoBehaviour {
     }
 #endregion
 
-	// Use this for initialization
+	// Initialization
 	void Start () {
+		initscene();
 	    if(startscene != null)
         {
             startscene.transform.position = new Vector3(0, 0, 0);

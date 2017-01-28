@@ -13,3 +13,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Kitchen.unity
   - enabled: 1
     path: Assets/Scenes/House.unity
+  - enabled: 1
+    path: Assets/Scenes/BedroomCutscene.unity
+  - enabled: 1
+    path: Assets/Scenes/CureMinigame.unity
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+  - enabled: 1
+    path: Assets/Scenes/SickMomCutscene.unity

@@ -1,19 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Manages the behavior of doors
 public class DoorManager : MonoBehaviour {
 
     public string nextscene;
     public ChangeScene scenemanager;
+
+	// Spawn location after going through door
 	public float xspawn;
 	public float yspawn;
-	
+
+	// GameObject of main character
 	private GameObject mc;
 
+	//Handles when someone walks into door
     void OnCollisionEnter2D(Collision2D c)
     {
-		if(scenemanager != null){
-			scenemanager.changeroom(nextscene, mc);
+		if(scenemanager != null && c.gameObject.name == "Main Character"){
+			scenemanager.changeroom(
+					nextscene,
+					character: mc,
+					xspawn: xspawn,
+					yspawn: yspawn);
 		}
     }
 

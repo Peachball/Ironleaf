@@ -5,9 +5,12 @@ using UnityEngine.UI;
 using System.IO;
 using System.Text;
 
+// Handles things that involve the dialogue box
 public class DialogueManager : MonoBehaviour {
 
-    public Text textbox;
+    public Text textbox; //links to ui textbox
+
+	private CanvasGroup cg;
 
 #region Dialogue format description
     /*
@@ -23,10 +26,10 @@ public class DialogueManager : MonoBehaviour {
         ]
     */
 #endregion
-    //Placeholder (dialogue should be loaded in dynamically from txt files later
 
 	// Use this for initialization
 	void Start () {
+		cg = GetComponent<CanvasGroup>();
 	}
 
     // Update is called once per frame
@@ -35,6 +38,8 @@ public class DialogueManager : MonoBehaviour {
 
 	/*
 	 * Files are looked up in the "Assets/Dialogue" folder
+	 *
+	 * returns: string representing the text in the file
 	 */
     public string loadDialogueFromFile(string filename)
     {
@@ -44,16 +49,35 @@ public class DialogueManager : MonoBehaviour {
         return r.ReadToEnd();
     }
 
+	public void hide(){
+		cg.alpha = 0f;
+	}
+
+	public void show(){
+		cg.alpha = 1f;
+	}
+
 #region helper methods
-    private void setText(string text)
+	//Set text of textbox
+    public void setText(string text)
     {
         textbox.text = text;
     }
 #endregion
 
 #region Dialogue player
-    public IEnumerator playLines(string lines, float delay=0.0f)
+	/*Play lines with the appropriate timing based off of a json string
+	 *
+	 * Params:
+	 *   lines: A json string representing the lines of dialogue + other
+	 *          details(e.g. time)
+	 *   delay: Amount of time to wait before playing said dialogue
+	 *   		(Generally should be 0)
+	*/
+    public IEnumerator playLines(string lines, float delay=0.0f,
+			string type="dialogue")
     {
+		show();
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
         for (int i = 0; i < parsed_dialogue.Count; i++)
@@ -62,20 +86,26 @@ public class DialogueManager : MonoBehaviour {
             string line = parsed_dialogue[i]["text"];
             float time = parsed_dialogue[i]["time"].AsFloat;
 
-			//Whether or not to wait for the user to click something to continue
-			//the dialogue
-			bool fast = parsed_dialogue[i]["fast"].AsBool;
-			if(!fast && i != 0){
-				while(!Input.GetButton("Interact")){
-					yield return null;
-				}
-			}
+			      //Whether or not to wait for the user to click something to continue
+			      //the dialogue
+			      bool fast = parsed_dialogue[i]["fast"].AsBool;
+			      if(!fast && i != 0){
+				      while(!Input.GetButton("Interact")){
+					      yield return null;
+				      }
+			      }
             yield return StartCoroutine(
-					playDialogue(lines: line, time: time, name: name));
+					    playDialogue(lines: line, time: time, name: name));
         }
         yield return null;
     }
 
+	/*
+	 * Play one line of dialogue
+	 *
+	 * This method waits the appropriate amount of time between each character
+	 * and appends the name to the dialogue line
+	 */
     private IEnumerator playDialogue(string lines, float time, string name="")
     {
         float time_bet_chars = time / lines.Length;
@@ -87,7 +117,10 @@ public class DialogueManager : MonoBehaviour {
                 prefix = name + " : ";
             }
             setText(prefix + lines.Substring(0, i));
-            yield return new WaitForSeconds(time_bet_chars);
+            if (!Input.GetButton("Run"))
+            {
+              yield return new WaitForSeconds(time_bet_chars);
+            }
         }
     }
 #endregion
