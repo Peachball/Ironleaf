@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000011687077278}
   - 61: {fileID: 61000012938674612}
   - 61: {fileID: 61000011080386594}
-  - 114: {fileID: 114000010820591694}
+  - 114: {fileID: 114000011894807868}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -190,17 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpawn: -5
   ySpawn: 0
---- !u!114 &114000010820591694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011145419012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066e9a1890ac54028877bb513f582329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011177719748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +205,18 @@ MonoBehaviour:
   scenemanager: {fileID: 0}
   xspawn: 6
   yspawn: 0
+--- !u!114 &114000011894807868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011145419012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76291c4d4a73f404fb6a51a2395d77f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: You see a flower, but you aren't sure what to do about it
 --- !u!212 &212000010272811648
 SpriteRenderer:
   m_ObjectHideFlags: 1
