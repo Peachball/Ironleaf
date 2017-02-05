@@ -18,7 +18,7 @@ public class SimpleInteraction : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D c){
-		if(c.gameObject.name == "Main Character"
+		if(c.gameObject.tag == "Player"
 				&& Input.GetButton("Interact")){
             dbox.setText(message);
 			dbox.show();
@@ -26,7 +26,7 @@ public class SimpleInteraction : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D c){
-		if(c.gameObject.name == "Main Character"){
+		if(c.gameObject.tag == "Player"){
 			dbox.setText("");
 			dbox.hide();
 		}

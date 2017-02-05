@@ -8,6 +8,7 @@ public class CharacterControl : MonoBehaviour {
 
     public float speed;
     public float runSpeed;
+	public bool disabled = false;
 
 	// Use this for initialization
 	void Start () {
@@ -27,22 +28,24 @@ public class CharacterControl : MonoBehaviour {
         {
           movespeed = speed;
         }
-        if (Input.GetButton("Up"))
-        {
-            vel.y += movespeed;
-        }
-        if (Input.GetButton("Down"))
-        {
-          vel.y -= movespeed;
-        }
-        if (Input.GetButton("Right"))
-        {
-          vel.x += movespeed;
-        }
-        if (Input.GetButton("Left"))
-        {
-          vel.x -= movespeed;
-        }
+		if (!disabled){
+			if (Input.GetButton("Up"))
+			{
+				vel.y += movespeed;
+			}
+			if (Input.GetButton("Down"))
+			{
+				vel.y -= movespeed;
+			}
+			if (Input.GetButton("Right"))
+			{
+				vel.x += movespeed;
+			}
+			if (Input.GetButton("Left"))
+			{
+				vel.x -= movespeed;
+			}
+		}
         rb.velocity = vel;
 
 		animator.SetFloat("VelX", rb.velocity.x);
