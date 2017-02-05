@@ -6,7 +6,8 @@ using System.Collections.Generic;
 public class Globals : MonoBehaviour {
 
 	public static Dictionary<string, int> inventory = new Dictionary<string, int>();
-	public static bool ready = false;
+	public static bool ready = false; // Signals when a certain scene is over
+									  // and ready to be changed
 
 	// Use this for initialization
 	void Start () {

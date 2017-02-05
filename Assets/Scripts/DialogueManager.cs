@@ -8,7 +8,7 @@ using System.Text;
 // Handles things that involve the dialogue box
 public class DialogueManager : MonoBehaviour {
 
-    public Text textbox; //links to ui textbox
+    private Text textbox; //links to ui textbox
 
 	private CanvasGroup cg;
 
@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cg = GetComponent<CanvasGroup>();
+		textbox = GetComponentInChildren<Text>();
 	}
 
     // Update is called once per frame
