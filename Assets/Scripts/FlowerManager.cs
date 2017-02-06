@@ -5,10 +5,6 @@ public class FlowerManager : MonoBehaviour {
 
 	private DialogueManager dbox;
 
-	private void select(){
-
-	}
-
 	/*
 	 * Get the text should be in the dialogue box
 	 */

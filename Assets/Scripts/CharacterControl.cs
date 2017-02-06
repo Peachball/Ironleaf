@@ -4,10 +4,14 @@ using System.Collections;
 public class CharacterControl : MonoBehaviour {
 
     public Rigidbody2D rb;
+	public InventoryManager iv;
+
 	private Animator animator;
 
     public float speed;
     public float runSpeed;
+	public bool disabled = false;
+	private bool checking_inventory = false;
 
 	// Use this for initialization
 	void Start () {
@@ -27,22 +31,46 @@ public class CharacterControl : MonoBehaviour {
         {
           movespeed = speed;
         }
-        if (Input.GetButton("Up"))
-        {
-            vel.y += movespeed;
-        }
-        if (Input.GetButton("Down"))
-        {
-          vel.y -= movespeed;
-        }
-        if (Input.GetButton("Right"))
-        {
-          vel.x += movespeed;
-        }
-        if (Input.GetButton("Left"))
-        {
-          vel.x -= movespeed;
-        }
+		if (!disabled){
+			if (Input.GetButton("Up"))
+			{
+				vel.y += movespeed;
+			}
+			if (Input.GetButton("Down"))
+			{
+				vel.y -= movespeed;
+			}
+			if (Input.GetButton("Right"))
+			{
+				vel.x += movespeed;
+			}
+			if (Input.GetButton("Left"))
+			{
+				vel.x -= movespeed;
+			}
+		}
+		if((!checking_inventory) && Input.GetButtonDown("Inventory")){
+			checking_inventory = true;
+			disabled = true;
+			iv.reset();
+			iv.updateText();
+			iv.show();
+		}
+
+		else if(checking_inventory){
+			if(Input.GetButtonDown("Inventory") || Input.GetButtonDown("Run")){
+				iv.hide();
+				checking_inventory = false;
+				disabled = false;
+			}
+			if(Input.GetButtonDown("Up")){
+				iv.movePointerUp();
+			}
+			if(Input.GetButtonDown("Down")){
+				iv.movePointerDown();
+			}
+		}
+
         rb.velocity = vel;
 
 		animator.SetFloat("VelX", rb.velocity.x);
