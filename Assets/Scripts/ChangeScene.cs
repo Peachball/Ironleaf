@@ -45,21 +45,15 @@ public class ChangeScene : MonoBehaviour {
 		}
         if(g != null)
         {
-			SceneData d = g.GetComponent<SceneData>();
             Vector3 pos = g.transform.position;
             gameObject.transform.position = new Vector3(pos.x, pos.y, -10);
 			if(character != null){
-				if((xspawn == float.MaxValue || yspawn == float.MaxValue)){
-					character.transform.position = new Vector2(d.xSpawn + pos.y, d.ySpawn + pos.x);
-				}
-				else{
-					character.transform.position = new Vector2(pos.x + xspawn, pos.y + yspawn);
-				}
+                character.transform.position = new Vector2(pos.x + xspawn, pos.y + yspawn);
 			}
         }
         else
         {
-            Debug.Log("Could not find room with name:");
+            Debug.Log("Could not find room with name:" + scene);
         }
     }
 #endregion

@@ -333,8 +333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextscene: Backyard
   scenemanager: {fileID: 0}
-  xspawn: 0
-  yspawn: 0
+  xspawn: -7
+  yspawn: -4
 --- !u!212 &212000010272811648
 SpriteRenderer:
   m_ObjectHideFlags: 1
