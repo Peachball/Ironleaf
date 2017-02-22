@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000014018016618}
+  m_RootGameObject: {fileID: 1624101458063532}
   m_IsPrefabParent: 1
---- !u!1 &1000012522844280
+--- !u!1 &1153152511654202
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000014195813270}
-  - component: {fileID: 61000012336027064}
-  - component: {fileID: 114000011172850254}
+  - component: {fileID: 4904813698839536}
+  - component: {fileID: 61634773554174582}
+  - component: {fileID: 114685617189569396}
   m_Layer: 0
   m_Name: Left Door
   m_TagString: Untagged
@@ -28,15 +28,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000012657613288
+--- !u!1 &1344164714479374
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000010056717330}
-  - component: {fileID: 212000013636902590}
+  - component: {fileID: 4461433009613030}
+  - component: {fileID: 212867186576810242}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -44,157 +44,97 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000014018016618
+--- !u!1 &1624101458063532
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000013827457300}
+  - component: {fileID: 4760359280481234}
   m_Layer: 0
-  m_Name: Backyard
+  m_Name: Shed
   m_TagString: room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1311647433683016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4467926837990508}
-  - component: {fileID: 61146569790486208}
-  - component: {fileID: 114266759025558054}
-  m_Layer: 0
-  m_Name: Right Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4000010056717330
+--- !u!4 &4461433009613030
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012657613288}
+  m_GameObject: {fileID: 1344164714479374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4000013827457300}
+  m_Father: {fileID: 4760359280481234}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4000013827457300
+--- !u!4 &4760359280481234
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014018016618}
+  m_GameObject: {fileID: 1624101458063532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 0, z: 0}
+  m_LocalPosition: {x: 75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4000010056717330}
-  - {fileID: 4467926837990508}
-  - {fileID: 4000014195813270}
+  - {fileID: 4461433009613030}
+  - {fileID: 4904813698839536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4000014195813270
+--- !u!4 &4904813698839536
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012522844280}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 1153152511654202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.36207998, y: 0.44364998, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4000013827457300}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4467926837990508
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311647433683016}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.74, y: 2.88, z: 0}
-  m_LocalScale: {x: 0.36207518, y: 0.44364586, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4000013827457300}
+  m_Father: {fileID: 4760359280481234}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61000012336027064
+--- !u!61 &61634773554174582
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012522844280}
+  m_GameObject: {fileID: 1153152511654202}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -21.332954, y: -7.372348}
+  m_Offset: {x: -6.727066, y: 2.742326}
   serializedVersion: 2
-  m_Size: {x: 1.4869529, y: 3.7732499}
---- !u!61 &61146569790486208
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311647433683016}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 4.1999993, y: 5.9999995}
---- !u!114 &114000011172850254
+  m_Size: {x: 1.470109, y: 2.499886}
+--- !u!114 &114685617189569396
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012522844280}
+  m_GameObject: {fileID: 1153152511654202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2bc3e447ca17a949ab8987908514934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextscene: Lawn
+  nextscene: Backyard
   scenemanager: {fileID: 0}
   xspawn: 7
-  yspawn: -3
---- !u!114 &114266759025558054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1311647433683016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bc3e447ca17a949ab8987908514934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextscene: Shed
-  scenemanager: {fileID: 0}
-  xspawn: -7
   yspawn: 1
---- !u!212 &212000013636902590
+--- !u!212 &212867186576810242
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012657613288}
+  m_GameObject: {fileID: 1344164714479374}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -220,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cefce7fb00cf244b6ab34ffe6d291cc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64b1c76bbb20a4210890f5d31479b7ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
