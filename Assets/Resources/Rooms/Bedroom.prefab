@@ -37,7 +37,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000014271790078}
-  - component: {fileID: 114000010269910074}
   m_Layer: 0
   m_Name: Bedroom
   m_TagString: room
@@ -179,19 +178,6 @@ EdgeCollider2D:
   - {x: 8.684881, y: 3.226224}
   - {x: 8.694107, y: 0.5898382}
   - {x: 9.174926, y: 0.59330845}
---- !u!114 &114000010269910074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011867433158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d956c0313e518498c8b31a5186223fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xSpawn: 0
-  ySpawn: 0
 --- !u!114 &114000011491371572
 MonoBehaviour:
   m_ObjectHideFlags: 1

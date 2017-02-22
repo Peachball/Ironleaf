@@ -388,6 +388,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114479833856634740, guid: af3988de9736d45de8d4f63bcccfde80,
+        type: 2}
+      propertyPath: scenemanager
+      value: 
+      objectReference: {fileID: 1275070576}
+    - target: {fileID: 114000011177719748, guid: af3988de9736d45de8d4f63bcccfde80,
+        type: 2}
+      propertyPath: scenemanager
+      value: 
+      objectReference: {fileID: 1275070576}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af3988de9736d45de8d4f63bcccfde80, type: 2}
   m_IsPrefabParent: 0
@@ -977,12 +987,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010162463178, guid: 2148a950aab20483da5b48bcc621bf3b,
+    - target: {fileID: 114000012758226914, guid: 2148a950aab20483da5b48bcc621bf3b,
         type: 2}
       propertyPath: scenemanager
       value: 
       objectReference: {fileID: 1275070576}
-    - target: {fileID: 114000012758226914, guid: 2148a950aab20483da5b48bcc621bf3b,
+    - target: {fileID: 114000010162463178, guid: 2148a950aab20483da5b48bcc621bf3b,
         type: 2}
       propertyPath: scenemanager
       value: 
