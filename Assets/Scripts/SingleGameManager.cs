@@ -14,7 +14,6 @@ public class SingleGameManager : MonoBehaviour{
 	void Start(){
 	}
 
-#region startgame
 	public void startgame(){
 		StartCoroutine(rungame());
 	}
@@ -30,7 +29,7 @@ public class SingleGameManager : MonoBehaviour{
 		DialogueManager dm = d.GetComponent<DialogueManager>();
 
 		//Load the dialogue
-		string cutscenedialogue = dm.loadDialogueFromFile(
+		string cutscenedialogue = DialogueManager.loadDialogueFromFile(
 				"1stCutsceneDialogue.txt");
 		//Play the dialogue
 		yield return StartCoroutine(dm.playLines(cutscenedialogue));
@@ -71,5 +70,4 @@ public class SingleGameManager : MonoBehaviour{
 		while(!Globals.ready)
 			yield return null;
 	}
-#endregion
 }

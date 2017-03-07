@@ -645,7 +645,7 @@ Prefab:
     - target: {fileID: 224000010263933768, guid: f4cad5434a6b84f5688b5bcb4524920c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 64.1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 224000010263933768, guid: f4cad5434a6b84f5688b5bcb4524920c,
         type: 2}
@@ -1000,6 +1000,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2129020484 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1233805806283482, guid: d5bbfc21bfbf94d17989f2fd6c68f013,
+    type: 2}
+  m_PrefabInternal: {fileID: 532878531}
+--- !u!114 &2129020486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2129020484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5907dfe3c75e1cd44a2c3513f60bfe6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_src: 
 --- !u!1001 &2140828611
 Prefab:
   m_ObjectHideFlags: 0

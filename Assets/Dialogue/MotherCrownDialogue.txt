@@ -1,0 +1,44 @@
+[
+{
+	name: Mother,
+	text: "What's the matter?",
+	time: 2,
+	options: [{text: "Just checking up on you",
+				next: 1},
+			  {text: "I'm feeling lonely?",
+				next: 2},
+			  {text: "I made a crown for you!",
+				next: 4}],
+	line: 0,
+},
+{
+	name: Mother,
+	text: "AWWWWWWWWW THANKS",
+	time: 3,
+	options: [],
+	line: 1,
+	next: -1,
+},
+{
+	name: Mother,
+	text: "Give me a hug then!",
+	time: 2,
+	options: [{text: "wtf sure",
+				next: 3}],
+	line: 2,
+},
+{
+	text: "(You can barely breathe)",
+	time: 3,
+	options: [],
+	line: 3,
+	next: -1,
+},
+{
+	text: "Oh, thanks!",
+	time: 2,
+	options: [],
+	line: 4,
+	next: -1,
+}
+]

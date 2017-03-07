@@ -1,34 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class SimpleInteraction : MonoBehaviour {
+public class SimpleInteraction : Interaction{
 
     public string message;
-    private DialogueManager dbox;
 
-	// Use this for initialization
-	void Start () {
-        GameObject d = GameObject.Find("DialogueBackground");
-        dbox = d.GetComponent<DialogueManager>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    protected override string init_text()
+    {
+        return message;
+    }
 
-	void OnTriggerStay2D(Collider2D c){
-		if(c.gameObject.tag == "Player"
-				&& Input.GetButton("Interact")){
-            dbox.setText(message);
-			dbox.show();
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D c){
-		if(c.gameObject.tag == "Player"){
-			dbox.setText("");
-			dbox.hide();
-		}
-	}
+    protected new void Update()
+    {
+        if (Input.GetButtonDown("Interact") && in_interaction)
+        {
+            stop_interaction();
+        }
+        else
+        {
+            base.Update();
+        }
+    }
 }

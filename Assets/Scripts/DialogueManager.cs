@@ -12,7 +12,6 @@ public class DialogueManager : MonoBehaviour {
 
 	private CanvasGroup cg;
 
-#region Dialogue format description
     /*
         The dialogue will be formatted as a json list representing the speech of two people
 
@@ -25,7 +24,6 @@ public class DialogueManager : MonoBehaviour {
         }
         ]
     */
-#endregion
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +40,7 @@ public class DialogueManager : MonoBehaviour {
 	 *
 	 * returns: string representing the text in the file
 	 */
-    public string loadDialogueFromFile(string filename)
+    public static string loadDialogueFromFile(string filename)
     {
 		string ps = System.IO.Path.DirectorySeparatorChar + "";
         var r = new StreamReader("Assets"+ps+"Dialogue" + ps + filename,
@@ -58,15 +56,12 @@ public class DialogueManager : MonoBehaviour {
 		cg.alpha = 1f;
 	}
 
-#region helper methods
 	//Set text of textbox
     public void setText(string text)
     {
         textbox.text = text;
     }
-#endregion
 
-#region Dialogue player
 	/*Play lines with the appropriate timing based off of a json string
 	 *
 	 * Params:
@@ -124,6 +119,4 @@ public class DialogueManager : MonoBehaviour {
             }
         }
     }
-#endregion
-
 }

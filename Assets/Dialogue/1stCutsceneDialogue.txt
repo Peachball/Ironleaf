@@ -25,9 +25,4 @@
 	existed",
 	time: 2,
 }
-{
-	name: Iron,
-	text: "",
-	time: 9999,
-}
 ]
