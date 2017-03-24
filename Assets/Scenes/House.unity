@@ -403,7 +403,24 @@ Prefab:
       propertyPath: scenemanager
       value: 
       objectReference: {fileID: 1275070576}
-    m_RemovedComponents: []
+    - target: {fileID: 212000010272811648, guid: af3988de9736d45de8d4f63bcccfde80,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c41b91813b29242df9c28414b57b5866,
+        type: 3}
+    - target: {fileID: 212000011687077278, guid: af3988de9736d45de8d4f63bcccfde80,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 722d4ca83af334c35aff2e71eb8310c8,
+        type: 3}
+    - target: {fileID: 4000013651595936, guid: af3988de9736d45de8d4f63bcccfde80, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.92
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 212000012965223892, guid: af3988de9736d45de8d4f63bcccfde80, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: af3988de9736d45de8d4f63bcccfde80, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &645690654 stripped
@@ -839,7 +856,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 376d099becae04299a0a33690608b6f6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
