@@ -1,28 +1,33 @@
 [
 {
-	name: Iron,
+	name: You,
 	text: "Man, aren't we having so much fun?",
 	time: 2,
 }
 {
 	name: Leaf,
-	text: "I totally am having fun with these chairs!",
+	text: "i just thought of something I have to do today."
 	time: 2,
 }
 {
-	name: Iron,
-	text: "It would really suck if these times didn't last forever",
-	time: 2,
-}
-{
-	name: Leaf,
-	text: "Yeah, it would be a real shame if GLOBAL WARMING was a thing",
+	name: You,
+	text: "What?"
 	time: 2,
 }
 {
 	name: Leaf,
-	text: "because people wouldn't be able to live their normal lives if it
+	text: "It's mothers birthday today, remember?"
+	time: 2,
+}
+{
+	name: Leaf,
+	text: "I'm going to make her a flower crown, do you want to come along?"
 	existed",
+	time: 2,
+}
+{
+	name: You,
+	text: "A crown, huh? Sounds like a good idea...",
 	time: 2,
 }
 ]
