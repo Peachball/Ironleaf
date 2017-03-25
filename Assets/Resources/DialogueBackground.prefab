@@ -165,7 +165,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000017588958, y: 0.0000023841858}
-  m_SizeDelta: {x: 755.5, y: 80}
+  m_SizeDelta: {x: 755.5, y: 62.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &225000014150792194
 CanvasGroup:
@@ -174,7 +174,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013712279624}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
