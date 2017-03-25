@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CharacterControl : MonoBehaviour {
 
@@ -7,6 +8,7 @@ public class CharacterControl : MonoBehaviour {
 	public InventoryManager iv;
 
 	private Animator animator;
+    private int cur_dir; // Current direction character is walking in
 
     public float speed;
     public float runSpeed;
@@ -73,6 +75,15 @@ public class CharacterControl : MonoBehaviour {
 
         rb.velocity = vel;
 
-		animator.SetFloat("VelX", rb.velocity.x);
+        animator.SetInteger("prev_state", cur_dir);
+        if(rb.velocity.magnitude != 0){
+            if(Math.Abs(rb.velocity.y) >= Math.Abs(rb.velocity.x)){
+                cur_dir = (rb.velocity.y > 0) ? 2 : 0;
+            }
+            else{
+                cur_dir = (rb.velocity.x > 0) ? 1 : 3;
+            }
+        }
+        animator.SetInteger("direction", cur_dir);
 	}
 }
