@@ -3,28 +3,27 @@
 	name: You,
 	text: "Man, aren't we having so much fun?",
 	time: 2,
-}
+},
 {
 	name: Leaf,
-	text: "i just thought of something I have to do today."
+	text: "i just thought of something I have to do today.",
 	time: 2,
-}
+},
 {
 	name: You,
-	text: "What?"
+	text: "What?",
 	time: 2,
-}
+},
 {
 	name: Leaf,
-	text: "It's mothers birthday today, remember?"
+	text: "It's mothers birthday today, remember?",
 	time: 2,
-}
+},
 {
 	name: Leaf,
-	text: "I'm going to make her a flower crown, do you want to come along?"
-	existed",
+	text: "I'm going to make her a flower crown, do you want to come along?",
 	time: 2,
-}
+},
 {
 	name: You,
 	text: "A crown, huh? Sounds like a good idea...",

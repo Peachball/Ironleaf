@@ -76,22 +76,23 @@ public class DialogueManager : MonoBehaviour {
 		show();
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
+        Debug.Log(parsed_dialogue);
         for (int i = 0; i < parsed_dialogue.Count; i++)
         {
             string name = parsed_dialogue[i]["name"];
             string line = parsed_dialogue[i]["text"];
             float time = parsed_dialogue[i]["time"].AsFloat;
 
-			      //Whether or not to wait for the user to click something to continue
-			      //the dialogue
-			      bool fast = parsed_dialogue[i]["fast"].AsBool;
-			      if(!fast && i != 0){
-				      while(!Input.GetButton("Interact")){
-					      yield return null;
-				      }
-			      }
+            //Whether or not to wait for the user to click something to continue
+            //the dialogue
+            bool fast = parsed_dialogue[i]["fast"].AsBool;
+            if(!fast && i != 0){
+                while(!Input.GetButton("Interact")){
+                    yield return null;
+                }
+            }
             yield return StartCoroutine(
-					    playDialogue(lines: line, time: time, name: name));
+                    playDialogue(lines: line, time: time, name: name));
         }
         yield return null;
     }
