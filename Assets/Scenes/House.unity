@@ -277,12 +277,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011172850254, guid: 74478dc0615f04168bd56f3f763ccd94,
+    - target: {fileID: 114266759025558054, guid: 74478dc0615f04168bd56f3f763ccd94,
         type: 2}
       propertyPath: scenemanager
       value: 
       objectReference: {fileID: 1275070576}
-    - target: {fileID: 114266759025558054, guid: 74478dc0615f04168bd56f3f763ccd94,
+    - target: {fileID: 114000011172850254, guid: 74478dc0615f04168bd56f3f763ccd94,
         type: 2}
       propertyPath: scenemanager
       value: 
@@ -741,14 +741,6 @@ Prefab:
       propertyPath: scenemanager
       value: 
       objectReference: {fileID: 1275070576}
-    - target: {fileID: 4904813698839536, guid: 38b186e128294fd43bdee124d0ae1f43, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 13.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4904813698839536, guid: 38b186e128294fd43bdee124d0ae1f43, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -7.86
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38b186e128294fd43bdee124d0ae1f43, type: 2}
   m_IsPrefabParent: 0

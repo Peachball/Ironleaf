@@ -59,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1705627029839182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4816044857835554}
+  - component: {fileID: 68026815323663238}
+  m_Layer: 0
+  m_Name: WallHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4461433009613030
 Transform:
   m_ObjectHideFlags: 1
@@ -84,8 +100,22 @@ Transform:
   m_Children:
   - {fileID: 4461433009613030}
   - {fileID: 4904813698839536}
+  - {fileID: 4816044857835554}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4816044857835554
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705627029839182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4760359280481234}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4904813698839536
 Transform:
@@ -94,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153152511654202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.15, y: -7.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4760359280481234}
@@ -114,6 +144,33 @@ BoxCollider2D:
   m_Offset: {x: -6.727066, y: 2.742326}
   serializedVersion: 2
   m_Size: {x: 1.470109, y: 2.499886}
+--- !u!68 &68026815323663238
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705627029839182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 7.5926056, y: -4.496083}
+  - {x: 7.591484, y: 0.50913024}
+  - {x: -3.9332352, y: 0.50996023}
+  - {x: -3.9541779, y: 1.3024201}
+  - {x: -4.5326004, y: 1.3291864}
+  - {x: -4.499428, y: 0.47231096}
+  - {x: -6.9996796, y: 0.48286164}
+  - {x: -6.939102, y: 1.3283601}
+  - {x: -7.495476, y: 1.2915423}
+  - {x: -7.4814606, y: -1.4590659}
+  - {x: 3.962738, y: -1.4894042}
+  - {x: 3.9841309, y: -3.992436}
+  - {x: 5.5074005, y: -4.0350924}
+  - {x: 5.4932404, y: -4.4899426}
 --- !u!114 &114685617189569396
 MonoBehaviour:
   m_ObjectHideFlags: 1
