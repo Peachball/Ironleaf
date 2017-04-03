@@ -9,3 +9,8 @@ of:
 * House
 	* The first place where the user actually gets to play the game
 	* Contains relvant settings for the crown challenge
+* SickMomCu
+* BedroomCu
+* Cureminig
+* End
+* Hallway
