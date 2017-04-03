@@ -76,7 +76,6 @@ public class DialogueManager : MonoBehaviour {
 		show();
         yield return new WaitForSeconds(delay);
         JSONNode parsed_dialogue = JSON.Parse(lines);
-        Debug.Log(parsed_dialogue);
         for (int i = 0; i < parsed_dialogue.Count; i++)
         {
             string name = parsed_dialogue[i]["name"];

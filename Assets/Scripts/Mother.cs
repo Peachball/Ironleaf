@@ -13,7 +13,6 @@ public class Mother : NPCController {
     {
         if(line == 4){
             Globals.ready = true;
-            Debug.Log("??");
         }
         base.stop_interaction();
     }

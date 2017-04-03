@@ -13,15 +13,23 @@ public class CharacterControl : MonoBehaviour {
     public float speed;
     public float runSpeed;
 	public bool disabled = false;
+    public bool trackCamera = false;
 	private bool checking_inventory = false;
+    private GameObject camera;
 
 	// Use this for initialization
 	void Start () {
-		animator = GetComponent<Animator>();
+		animator = GetComponentInChildren<Animator>();
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (trackCamera)
+        {
+            camera.transform.position = new Vector3(
+                transform.position.x, transform.position.y, -10);
+        }
         Vector2 vel = new Vector2(0, 0); //buffer for character velocity
         float movespeed;
 		//Detect which button is pressed -> set velocity based off buttons
@@ -51,7 +59,7 @@ public class CharacterControl : MonoBehaviour {
 				vel.x -= movespeed;
 			}
 		}
-		if((!checking_inventory) && Input.GetButtonDown("Inventory")){
+		if((!checking_inventory) && Input.GetButtonDown("Inventory") && !disabled){
 			checking_inventory = true;
 			disabled = true;
 			iv.reset();
