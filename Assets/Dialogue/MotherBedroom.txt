@@ -21,7 +21,7 @@
 	name: Mother,
 	text: "Give me a hug then!",
 	time: 2,
-	options: [{text: "wtf sure",
+	options: [{text: "sure..?",
 				next: 3}],
 	line: 2,
 },

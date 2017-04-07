@@ -19,9 +19,15 @@ public class SingleGameManager : MonoBehaviour{
 	}
 
 	private IEnumerator rungame(){
+        // Display help screen
+        SceneManager.LoadScene("Scenes/Help");
+        while(!Globals.ready)
+            yield return null;
+
 		//Play first cutscene + wait until it's done
 		SceneManager.LoadScene("Scenes/1stCutscene");
 		yield return null;
+
 
 		//Find the dialogue box to play dialogue from
 		GameObject d = null;
