@@ -1145,6 +1145,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729415141 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114362820817067648, guid: 91ac4aae3e04d4773a02fee9b3c55dd0,
+    type: 2}
+  m_PrefabInternal: {fileID: 756696041}
+  m_Script: {fileID: 11500000, guid: cbd54a1aa3aed47f59fe24a683c53ab1, type: 3}
 --- !u!1 &2048349209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,10 +1252,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1956733989232496, guid: eb6180e105920444b921f004aba35eb7, type: 2}
-      propertyPath: m_Name
-      value: Main Character
-      objectReference: {fileID: 0}
+    - target: {fileID: 114166263325158204, guid: eb6180e105920444b921f004aba35eb7,
+        type: 2}
+      propertyPath: iv
+      value: 
+      objectReference: {fileID: 1729415141}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb6180e105920444b921f004aba35eb7, type: 2}
   m_IsPrefabParent: 0
@@ -1309,12 +1316,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114976078374249628, guid: 2148a950aab20483da5b48bcc621bf3b,
+    - target: {fileID: 114643258600890876, guid: 2148a950aab20483da5b48bcc621bf3b,
         type: 2}
       propertyPath: scenemanager
       value: 
       objectReference: {fileID: 1275070576}
-    - target: {fileID: 114643258600890876, guid: 2148a950aab20483da5b48bcc621bf3b,
+    - target: {fileID: 114976078374249628, guid: 2148a950aab20483da5b48bcc621bf3b,
         type: 2}
       propertyPath: scenemanager
       value: 

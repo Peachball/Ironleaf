@@ -13,7 +13,8 @@ public abstract class Interaction : MonoBehaviour
     protected void Start()
     {
         dbox = GameObject.Find("DialogueBackground").GetComponent<DialogueManager>();
-        cc = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterControl>();
+        //cc = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterControl>();
+        cc = GameObject.Find("Main Character").GetComponent<CharacterControl>();
     }
 
     protected void Update()
