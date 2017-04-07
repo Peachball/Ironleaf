@@ -461,8 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextscene: Lawn
   scenemanager: {fileID: 0}
-  xspawn: -6
-  yspawn: 0
+  xspawn: -7
+  yspawn: -3
 --- !u!114 &114976078374249628
 MonoBehaviour:
   m_ObjectHideFlags: 1
