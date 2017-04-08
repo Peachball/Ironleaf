@@ -1,8 +1,8 @@
 [
 {
 	name: You,
-	text: "Man, aren't we having so much fun?",
-	time: 2,
+	text: "I'm totally having fun playing with these blocks",
+	time: 4,
 },
 {
 	name: Leaf,
@@ -21,7 +21,7 @@
 },
 {
 	name: Leaf,
-	text: "I'm going to make her a flower crown, do you want to come along?",
+	text: "I'm going to find her a crown, do you want to come along?",
 	time: 2,
 },
 {

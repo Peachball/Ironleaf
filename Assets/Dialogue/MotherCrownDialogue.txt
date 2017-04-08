@@ -35,6 +35,7 @@
 	next: -1,
 },
 {
+	name: Mother,
 	text: "Oh, thanks!",
 	time: 2,
 	options: [],

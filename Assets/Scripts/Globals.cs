@@ -8,6 +8,7 @@ public class Globals : MonoBehaviour {
 	public static Dictionary<string, int> inventory = new Dictionary<string, int>();
 	public static bool ready = false; // Signals when a certain scene is over
 									  // and ready to be changed
+    public static int trash_pieces = 0;
 
 	// Use this for initialization
 	void Start () {

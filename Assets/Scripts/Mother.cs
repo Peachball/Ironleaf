@@ -12,6 +12,7 @@ public class Mother : NPCController {
     protected override void stop_interaction()
     {
         if(line == 4){
+            Globals.trash_pieces = GameObject.FindGameObjectsWithTag("trash").Length;
             Globals.ready = true;
         }
         base.stop_interaction();

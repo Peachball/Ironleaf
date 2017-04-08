@@ -77,3 +77,4 @@ public abstract class Interaction : MonoBehaviour
 
     protected abstract string init_text();
 }
+

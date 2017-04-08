@@ -48,9 +48,7 @@ public class SingleGameManager : MonoBehaviour{
 
 		//Play Bedroom cutscene
 		SceneManager.LoadScene("Scenes/BedroomCutscene");
-		Globals.ready = false;
-		while(!Globals.ready)
-			yield return null;
+        yield return new WaitForSeconds(1);
 
 		//Play Hallway scene
 		SceneManager.LoadScene("Scenes/Hallway");
@@ -59,16 +57,16 @@ public class SingleGameManager : MonoBehaviour{
 			yield return null;
 
 		//Momma's sick cutscene
-		SceneManager.LoadScene("Scenes/SickMomCutscene");
-		Globals.ready = false;
-		while(!Globals.ready)
-			yield return null;
+		//SceneManager.LoadScene("Scenes/SickMomCutscene");
+		//Globals.ready = false;
+		//while(!Globals.ready)
+			//yield return null;
 
 		//Cure construction minigame
-		SceneManager.LoadScene("Scenes/CureMinigame");
-		Globals.ready = false;
-		while(!Globals.ready)
-			yield return null;
+		//SceneManager.LoadScene("Scenes/CureMinigame");
+		//Globals.ready = false;
+		//while(!Globals.ready)
+			//yield return null;
 		
 		//Concluding cutscene
 		SceneManager.LoadScene("Scenes/End");
