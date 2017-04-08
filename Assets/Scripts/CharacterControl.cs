@@ -33,8 +33,7 @@ public class CharacterControl : MonoBehaviour {
         Vector2 vel = new Vector2(0, 0); //buffer for character velocity
         float movespeed;
 		//Detect which button is pressed -> set velocity based off buttons
-        if (Input.GetButton("Run"))
-        {
+        if (Input.GetButton("Run")) {
           movespeed = runSpeed;
         }
         else
@@ -83,6 +82,7 @@ public class CharacterControl : MonoBehaviour {
 
         rb.velocity = vel;
 
+        //Control animations
         animator.SetInteger("prev_state", cur_dir);
         if(rb.velocity.magnitude != 0){
             if(Math.Abs(rb.velocity.y) >= Math.Abs(rb.velocity.x)){
